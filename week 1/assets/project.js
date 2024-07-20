@@ -58,7 +58,7 @@ function displayProjects() {
         projectCard.classList.add('project-card');
 
         projectCard.innerHTML = `
-            <a href="Detail.html">
+            <a href="detail.html">
             <img src="https://via.placeholder.com/50" alt="Project Image" class="project-image">
 
             </a>
