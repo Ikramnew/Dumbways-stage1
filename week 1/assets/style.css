@@ -4,67 +4,125 @@ body{
     background-color:  #e2e6e9;
 }
 
-nav{
+nav {
     background-color: #f4f3f3;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: relative; /* Untuk penempatan mobile-menu */
 }
 
-
-.left ul{
-     display: flex;
-     align-items: center;   
-}
-.left img{
-    width: 40px;
-    padding-right: 30px;
-    
-}
-
-.left ul li{
-    padding-right: 15px;
-    list-style-type: none;
-    color: rgb(158, 158, 158);
-
-    
-}
-
-.left ul li a{
-    text-decoration: none;
-    color:black;
-}
-
-.right{
-    padding-right: 20px;
+.left {
     display: flex;
     align-items: center;
 }
 
-.right a{
-    
-    color: white;
+.left img {
+    width: 40px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.left ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.left ul li {
+    padding-right: 15px;
+}
+
+.left ul li a {
     text-decoration: none;
+    color: black;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.right button {
+    border: none;
     background-color: black;
+    color: white;
     padding: 6px;
     border-radius: 10px;
     box-shadow: 0px 4px 4px 0px rgb(124, 118, 118);
 }
-.right a:hover{
-    
-    color: rgb(255, 255, 255);
+
+.right button a {
     text-decoration: none;
-    background-color: orangered ;
-    padding: 6px;
-    border-radius: 10px;
+    color: white;
 }
-button{
-    border: none;
+
+.right button:hover {
+    background-color: orangered;
 }
+
+.hamburger {
+    display: none; /* Hide hamburger button by default */
+}
+
+.mobile-menu {
+    display: none; /* Hide mobile menu by default */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #f4f3f3;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.mobile-menu ul li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mobile-menu ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    text-align: center;
+}
+
+.mobile-menu ul li a:hover {
+    background-color: orangered;
+    color: white;
+}
+
+@media screen and (max-width: 900px) {
+    .left ul {
+        display: none; /* Hide default menu on mobile */
+    }
+
+    .right{
+        display: none;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger button on mobile */
+    }
+}
+    
 
 
 /*  */
 .card{
-    width: 60%;
+    width: 80%;
     margin: auto;
     border-radius: 10px;
     margin-top: 50px;
@@ -77,7 +135,7 @@ button{
 }
 
 .content{
-    width: 400px;
+    width: 100%;
     margin: auto;
     padding-bottom: 30px;
     padding-top: 20px;
@@ -86,7 +144,7 @@ button{
 
 
 .photo-profile img{
-    width: 250px;
+    width: 100%;
     height: 250px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
@@ -335,4 +393,79 @@ button{
 
 .tech i{
     padding: 10px;
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.testimonial {
+    width: 25%;
+    margin: 0px 15px 30px 15px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial img {
+    height: 200px;
+
+}
+
+.quote {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.author {
+    font-weight: bold;
+    text-align: right;
+}
+
+.profile-testimonial {
+    width: 100%;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .testimonial {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .testimonial {
+        width: 100%;
+    }
+}
+
+.container-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-rating {
+    display: flex;
+}
+
+.rating-btn {
+    margin: 20px;
+    padding: 0px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(3, 3, 3);
+    color: white;
+    cursor: pointer;
+}
+.rating-btn:hover{
+    opacity: 0.5;
+    transition: 0.5s;
 }

@@ -24,4 +24,10 @@ function sendEmail(event) {
 
     // Clear the form
     document.getElementById('myForm').reset();
+};
+
+function toggleMenu() {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
 }
+
